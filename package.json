@@ -41,7 +41,8 @@
     "@stdlib/array-base-assert-is-complex-typed-array": "^0.1.1",
     "@stdlib/array-base-resolve-getter": "^0.2.1",
     "@stdlib/strided-base-reinterpret-complex": "^0.1.1",
-    "@stdlib/types": "^0.3.2"
+    "@stdlib/types": "^0.3.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.1"
   },
   "devDependencies": {
     "@stdlib/array-base-to-accessor-array": "^0.2.1",
