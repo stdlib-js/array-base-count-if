@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Count the number of elements in an array that satisfy the provided testing function.
+> Count the number of elements in an array which pass a test implemented by a predicate function.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -45,32 +45,48 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-count-if
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import countIf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-count-if@deno/mod.js';
+var countIf = require( '@stdlib/array-base-count-if' );
 ```
 
 #### countIf( x, predicate\[, thisArg] )
 
-Counts the number of elements in an array that satisfy the provided testing function.
+Counts the number of elements in an array which pass a test implemented by a predicate function.
 
 ```javascript
-var x = [ 0, 1, 0, 1, 2 ];
-
-function predicate( val ) {
-    return ( val % 2 === 0 );
+function predicate( value ) {
+    return ( value > 0 );
 }
+
+var x = [ 0, 1, 0, 1, 2 ];
 
 var out = countIf( x, predicate );
 // returns 3
 ```
-
-If a `predicate` function returns a truthy value, the function counts that value.
 
 The `predicate` function is provided three arguments:
 
@@ -81,18 +97,22 @@ The `predicate` function is provided three arguments:
 To set the `predicate` function execution context, provide a `thisArg`.
 
 ```javascript
-var x = [ 1, 2, 3, 4 ];
-
-var context = {
-    'target': 3
-};
-
 function predicate( value ) {
-    return ( value > this.target );
+    this.count += 1;
+    return ( value > 0 );
 }
 
+var x = [ 0, 1, 0, 1, 2 ];
+
+var context = {
+    'count': 0
+};
+
 var out = countIf( x, predicate, context );
-// returns 1
+// returns 3
+
+var cnt = context.count;
+// returns 5
 ```
 
 </section>
@@ -116,19 +136,21 @@ var out = countIf( x, predicate, context );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-bernoulli@deno/mod.js';
-import countIf from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-count-if@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var isPositiveInteger = require( '@stdlib/assert-is-positive-integer' ).isPrimitive;
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var countIf = require( '@stdlib/array-base-count-if' );
 
-var x = bernoulli( 100, 0.5, {
-    'dtype': 'generic'
+var x = discreteUniform( 10, -5, 5, {
+    'dtype': 'int32'
 });
-console.log( x );
+// returns <Int32Array>
 
-function predicate( val ) {
-    return val === 1;
-}
-var n = countIf( x, predicate );
-console.log( n );
+var out = countIf( x, naryFunction( isPositiveInteger, 1 ) );
+// returns <number>
+
+console.log( x );
+console.log( out );
 ```
 
 </section>
@@ -160,7 +182,7 @@ console.log( n );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
