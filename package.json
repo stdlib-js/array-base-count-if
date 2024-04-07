@@ -1,7 +1,7 @@
 {
   "name": "@stdlib/array-base-count-if",
   "version": "0.0.0",
-  "description": "Count the number of elements in an array that satisfy the provided testing function.",
+  "description": "Count the number of elements in an array which pass a test implemented by a predicate function.",
   "license": "Apache-2.0",
   "author": {
     "name": "The Stdlib Authors",
@@ -38,9 +38,7 @@
   },
   "dependencies": {
     "@stdlib/array-base-assert-is-accessor-array": "^0.2.1",
-    "@stdlib/array-base-assert-is-complex-typed-array": "^0.1.1",
     "@stdlib/array-base-resolve-getter": "^0.2.1",
-    "@stdlib/strided-base-reinterpret-complex": "^0.1.1",
     "@stdlib/types": "^0.3.2"
   },
   "devDependencies": {
@@ -48,8 +46,13 @@
     "@stdlib/array-complex128": "^0.2.1",
     "@stdlib/array-int32": "^0.2.1",
     "@stdlib/assert-is-nonnegative-integer": "^0.2.1",
+    "@stdlib/assert-is-positive-integer": "^0.2.1",
+    "@stdlib/complex-imag": "^0.2.1",
+    "@stdlib/complex-real": "^0.2.1",
     "@stdlib/math-base-special-pow": "^0.2.1",
     "@stdlib/random-array-bernoulli": "^0.2.1",
+    "@stdlib/random-array-discrete-uniform": "^0.2.1",
+    "@stdlib/utils-nary-function": "^0.2.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
