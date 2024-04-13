@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-base-count-if",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Count the number of elements in an array which pass a test implemented by a predicate function.",
   "license": "Apache-2.0",
   "author": {
