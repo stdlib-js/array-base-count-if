@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/array-base-count-if",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Count the number of elements in an array which pass a test implemented by a predicate function.",
   "license": "Apache-2.0",
   "author": {
@@ -37,26 +37,26 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-base-assert-is-accessor-array": "^0.2.1",
+    "@stdlib/array-base-assert-is-accessor-array": "^0.2.2",
     "@stdlib/array-base-resolve-getter": "^0.2.1",
     "@stdlib/types": "^0.3.2"
   },
   "devDependencies": {
     "@stdlib/array-base-to-accessor-array": "^0.2.1",
     "@stdlib/array-complex128": "^0.2.1",
-    "@stdlib/array-int32": "^0.2.1",
-    "@stdlib/assert-is-nonnegative-integer": "^0.2.1",
-    "@stdlib/assert-is-positive-integer": "^0.2.1",
-    "@stdlib/complex-float64-imag": "github:stdlib-js/complex-float64-imag#main",
-    "@stdlib/complex-float64-real": "github:stdlib-js/complex-float64-real#main",
-    "@stdlib/math-base-special-pow": "^0.2.1",
+    "@stdlib/array-int32": "^0.2.2",
+    "@stdlib/assert-is-nonnegative-integer": "^0.2.2",
+    "@stdlib/assert-is-positive-integer": "^0.2.2",
+    "@stdlib/complex-float64-imag": "^0.1.1",
+    "@stdlib/complex-float64-real": "^0.1.1",
+    "@stdlib/math-base-special-pow": "^0.3.0",
     "@stdlib/random-array-bernoulli": "^0.2.1",
     "@stdlib/random-array-discrete-uniform": "^0.2.1",
-    "@stdlib/utils-nary-function": "^0.2.1",
+    "@stdlib/utils-nary-function": "^0.2.2",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
-    "@stdlib/bench-harness": "^0.2.1"
+    "@stdlib/bench-harness": "^0.2.2"
   },
   "engines": {
     "node": ">=0.10.0",

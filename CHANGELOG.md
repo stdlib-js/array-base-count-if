@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.1.1">
 
-## Unreleased (2024-07-17)
+## 0.1.1 (2024-07-29)
 
 <section class="commits">
 
@@ -45,7 +45,7 @@ A total of 1 person contributed to this release. Thank you to this contributor:
 
 ### Features
 
--   [`ecd3518`](https://github.com/stdlib-js/stdlib/commit/ecd3518101b9c013ff9279b7f56e64015606907d) - add `array/base/count-if` [(##1372)](#1372)
+-   [`ecd3518`](https://github.com/stdlib-js/stdlib/commit/ecd3518101b9c013ff9279b7f56e64015606907d) - add `array/base/count-if` [(#1372)](https://github.com/stdlib-js/stdlib/pull/1372)
 
 </section>
 
@@ -67,7 +67,7 @@ A total of 1 person contributed to this release. Thank you to this contributor:
 
 This release closes the following issue:
 
-[##1324](#1324)
+[#1324](https://github.com/stdlib-js/stdlib/issues/1324)
 
 </section>
 
@@ -80,7 +80,7 @@ This release closes the following issue:
 <details>
 
 -   [`310c13c`](https://github.com/stdlib-js/stdlib/commit/310c13c8b80e7a0259abf3b2470857b55c4ec865) - **fix:** address handling of complex arrays, refactor tests, and clean-up _(by Athan Reines)_
--   [`ecd3518`](https://github.com/stdlib-js/stdlib/commit/ecd3518101b9c013ff9279b7f56e64015606907d) - **feat:** add `array/base/count-if` [(##1372)](#1372) _(by Utkarsh, Philipp Burckhardt)_
+-   [`ecd3518`](https://github.com/stdlib-js/stdlib/commit/ecd3518101b9c013ff9279b7f56e64015606907d) - **feat:** add `array/base/count-if` [(#1372)](https://github.com/stdlib-js/stdlib/pull/1372) _(by Utkarsh, Philipp Burckhardt)_
 
 </details>
 
