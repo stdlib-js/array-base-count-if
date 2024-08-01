@@ -38,12 +38,12 @@
   },
   "dependencies": {
     "@stdlib/array-base-assert-is-accessor-array": "^0.2.2",
-    "@stdlib/array-base-resolve-getter": "^0.2.1",
+    "@stdlib/array-base-resolve-getter": "^0.2.2",
     "@stdlib/types": "^0.3.2"
   },
   "devDependencies": {
-    "@stdlib/array-base-to-accessor-array": "^0.2.1",
-    "@stdlib/array-complex128": "^0.2.1",
+    "@stdlib/array-base-to-accessor-array": "^0.2.2",
+    "@stdlib/array-complex128": "^0.3.0",
     "@stdlib/array-int32": "^0.2.2",
     "@stdlib/assert-is-nonnegative-integer": "^0.2.2",
     "@stdlib/assert-is-positive-integer": "^0.2.2",
